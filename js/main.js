@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
 		    items: 4,
 		    loop: true,
 		    stagePadding: 0,
-		    margin: 20,
+		    margin: 100,
 		    smartSpeed: 1000,
 		    autoplay: false,
 		    nav: true,
@@ -84,13 +84,13 @@ jQuery(document).ready(function($) {
 		    dots: false,
 		    responsive:{
 	        600:{
-	        	margin: 20,
+	        	margin: 56,
 	          items: 2
 	        },
 	        1000:{
-	        	margin: 20,
-	        	stagePadding: 0,
-	          items: 3
+	        	margin: 10,
+	        	stagePadding: 10,
+                items: 4
 	        }
 		    }
 			});
@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
 	
 		$('.slide-one-item').owlCarousel({
 	     loop: true,
-        margin: 0,
+        margin: 100,
         items: 4,
         dots: false,
         nav: true,
@@ -146,15 +146,15 @@ jQuery(document).ready(function($) {
 		    center: false,
 		    items: 1,
 		    loop: false,
-				stagePadding: 0,
+			stagePadding: 0,
 		    margin: 0,
 		    autoplay: false,
-		    nav: false,
-		    dots: true,
+		    nav: true,
+		    dots: false,
 		    touchDrag: true,
   			mouseDrag: true,
   			smartSpeed: 1000,
-				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
 	        768:{
 	        	margin: 30,
@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
 	        	responsiveRefreshRate: 10,
 	        	touchDrag: false,
   					mouseDrag: false,
-	          items: 3
+	          items: 4
 	        },
 	        1200:{
 	        	margin: 30,
@@ -178,7 +178,7 @@ jQuery(document).ready(function($) {
 	        	responsiveRefreshRate: 10,
 	        	touchDrag: false,
   					mouseDrag: false,
-	          items: 3
+	          items: 4
 	        }
 		    }
 			});
@@ -187,8 +187,11 @@ jQuery(document).ready(function($) {
 	};
 	siteCarousel();
 
-	
-
+$(document).ready(function(){ 
+   $('.fa-arrow-right').on('click',function(){
+      $('.fa-arrow-left').toggle();
+   });
+});
 	
 	})
 
