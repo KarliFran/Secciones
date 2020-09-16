@@ -36,16 +36,6 @@ jQuery(document).ready(function($) {
 
     }, 1000);
 
-		$('body').on('click', '.arrow-collapse', function(e) {
-      var $this = $(this);
-      if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-        $this.removeClass('active');
-      } else {
-        $this.addClass('active');
-      }
-      e.preventDefault();  
-      
-    });
 
 
 	}; 
@@ -147,17 +137,17 @@ jQuery(document).ready(function($) {
 		    items: 1,
 		    loop: false,
 			stagePadding: 0,
-		    margin: 0,
+		    margin: 10,
 		    autoplay: false,
 		    nav: true,
 		    dots: false,
 		    touchDrag: true,
   			mouseDrag: true,
   			smartSpeed: 1000,
-			navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+			
 		    responsive:{
 	        768:{
-	        	margin: 30,
+	        	margin: 10,
 	        	nav: false,
 	        	responsiveRefreshRate: 10,
 	          items: 1
@@ -168,17 +158,17 @@ jQuery(document).ready(function($) {
 	        	nav: false,
 	        	responsiveRefreshRate: 10,
 	        	touchDrag: false,
-  					mouseDrag: false,
-	          items: 4
+  			    mouseDrag: false,
+	            items: 4
 	        },
 	        1200:{
-	        	margin: 30,
+	        	margin: 10,
 	        	stagePadding: 0,
 	        	nav: false,
 	        	responsiveRefreshRate: 10,
 	        	touchDrag: false,
-  					mouseDrag: false,
-	          items: 4
+  			    mouseDrag: false,
+	            items: 4
 	        }
 		    }
 			});
@@ -188,8 +178,10 @@ jQuery(document).ready(function($) {
 	siteCarousel();
 
 $(document).ready(function(){ 
+  $('.fa-arrow-left').css("display", "none");
    $('.fa-arrow-right').on('click',function(){
       $('.fa-arrow-left').toggle();
+
    });
 });
 	
